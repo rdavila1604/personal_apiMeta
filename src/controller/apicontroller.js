@@ -34,11 +34,11 @@ const recibir = (req, res) => {
         // var texto = messages["text"]["body"]
 
         // var numero = messages["from"];
-        var entry = req.body.entry[0].changes[0].value.messages;
+        var {from, text} = req.body.entry[0].changes[0].value.messages[0];
 
-       // console.log("Enviado desde :" + numero + " El texto es el siguiente : " + texto);
+       //console.log("Enviado desde :" + from + " El texto es el siguiente : " + texto);
         //enviarmensaje.EnviarMensajeWhastapp(texto,numero);
-        console.log(entry);
+        console.log(from,"",text);
         // console.log(objetoMensaje);
         res.send("EVENT_RECEIVED");
     } catch (e) {
