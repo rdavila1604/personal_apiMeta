@@ -1,3 +1,6 @@
+const enviarmensaje = require("../service/apiservice");
+
+
 const verificar = (req, res) => {
     try {
         let tokenandercode = "ANDERCODENODEJSAPIMETA";
@@ -30,9 +33,10 @@ const recibir = (req, res) => {
         let messages = objetoMensaje[0];
         let texto = messages["text"]["body"]
 
-        let number = messages["from"];
+        let numero = messages["from"];
 
-        console.log("Enviado desde :" + number + " El texto es el siguiente : " + texto);
+        console.log("Enviado desde :" + numero + " El texto es el siguiente : " + texto);
+        enviarmensaje.EnviarMensajeWhastapp(texto,numero);
 
         // console.log(objetoMensaje);
         res.send("EVENT_RECEIVED");
