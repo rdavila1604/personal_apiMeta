@@ -38,7 +38,7 @@ const recibir = (req, res) => {
 
        //console.log("Enviado desde :" + from + " El texto es el siguiente : " + texto);
         //enviarmensaje.EnviarMensajeWhastapp(texto,numero);
-        console.log(from,"",text);
+        console.log(from,"",body);
         // console.log(objetoMensaje);
         res.send("EVENT_RECEIVED");
     } catch (e) {
