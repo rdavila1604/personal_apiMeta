@@ -14,7 +14,7 @@ function EnviarMensajeWhastapp(texto,number){
 
     const options = {
         host : "graph.facebook.com",
-        path : "/v17.0/105388349330517/messages/",
+        path : "/v17.0/105388349330517/messages",
         method : "POST",
         body: data,
         headers : {
