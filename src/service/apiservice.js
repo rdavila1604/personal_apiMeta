@@ -8,7 +8,7 @@ function EnviarMensajeWhastapp(texto,numero){
         "type": "text",
         "text": {
             "preview_url": false,
-            "body": "hola soy raymond davila"
+            "body": "🚀 Hola visita mi web para mas información \n 😃 Por favor ingresar de la lista un número para recibir información\n 📌 1.Informacion del Curso \n2.Ubicacion del local \n3.Enviar temario en pdf \n4.Por favor enviar audio explicando curso 🎙️ \n5.Ver video de Introducción al curso \n5.Hablar con un humano"
         }
     });
 
