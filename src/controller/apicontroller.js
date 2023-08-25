@@ -11,7 +11,7 @@ const verificar = (req, res) => {
         }
 
        
-        console.log(req);
+        //console.log(req);
     } catch (e) {
         res.status(400).send();
     }
