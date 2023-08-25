@@ -21,8 +21,14 @@ const verificar = (req, res) => {
 }
 
 const recibir = (req, res) => {
-    console.log(req);
-    res.send("EVENT_RECEIVED");
+    try {
+        let entry = (req.body["entry"])[0];
+        console.log(entry);
+    } catch (e) {
+        console.log(e);
+        res.send("EVENT_RECEIVED");
+    }
+    
     //console.log("Recibido Consola");
 
 }
