@@ -8,7 +8,7 @@ function EnviarMensajeWhastapp(texto,numero){
         "type": "text",
         "text": {
             "preview_url": false,
-            "body": "🚀 Hola visita mi web para mas información \n 😃 Por favor ingresar de la lista un número para recibir información\n 📌 1️⃣ Informacion del Curso \n 2️⃣ Ubicacion del local 📍 \n3️⃣ Enviar temario en pdf 📄 \n 4️⃣ Por favor enviar audio explicando curso 🎙️ \n5️⃣ Ver video de Introducción al curso \n6️⃣ Hablar con un humano 👥"
+            "body": "🚀 Hola visita mi web para mas información \n 😃 Por favor ingresar de la lista un número para recibir información \n 1️⃣ Informacion del Curso \n 2️⃣ Ubicacion del local 📍 \n 3️⃣ Enviar temario en pdf 📄 \n 4️⃣ Por favor enviar audio explicando curso 🎙️ \n 5️⃣ Ver video de Introducción al curso \n6️⃣ Hablar con un humano 👥"
         }
     });
 
