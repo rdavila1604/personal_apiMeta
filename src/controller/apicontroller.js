@@ -1,6 +1,16 @@
 const verificar = (req, res) => {
-    res.send("Verificado");
-    console.log("Verificado Consola");
+    try {
+        let tokenandercode = "ANDERCODENODEJSAPIMETA";
+        let token = req.query["hub.verify_token"];
+        let challenge = req.query["hub.challenge"];
+
+        res.send(challenge);
+        console.log(req);
+    } catch (e) {
+        res.status(400).send();
+    }
+    // res.send("Verificado");
+    // console.log("Verificado Consola");
 
 }
 
