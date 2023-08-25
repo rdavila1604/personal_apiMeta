@@ -1,6 +1,6 @@
 const https = require("https");
 
-function EnviarMensajeWhastapp(texto,number){
+function EnviarMensajeWhastapp(texto,numero){
     const data = JSON.stringify({
         "messaging_product": "whatsapp",   
         "recipient_type": "individual",
