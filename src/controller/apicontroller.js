@@ -25,6 +25,7 @@ const recibir = (req, res) => {
         let entry = (req.body["entry"])[0];
         let changes = (entry["changes"])[0];
         console.log(changes);
+        res.send("EVENT_RECEIVED");
     } catch (e) {
         console.log(e);
         res.send("EVENT_RECEIVED");
