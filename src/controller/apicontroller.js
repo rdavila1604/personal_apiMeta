@@ -25,15 +25,15 @@ const verificar = (req, res) => {
 
 const recibir = (req, res) => {
     try {
-        let entry = (req.body["entry"])[0];
-        let changes = (entry["changes"])[0];
-        let value = changes["value"];
-        let objetoMensaje = value["messages"];
+        var entry = (req.body["entry"])[0];
+        var changes = (entry["changes"])[0];
+        var value = changes["value"];
+        var objetoMensaje = value["messages"];
 
-        let messages = objetoMensaje[0];
-        let texto = messages["text"]["body"]
+        var messages = objetoMensaje[0];
+        var texto = messages["text"]["body"]
 
-        let numero = messages["from"];
+        var numero = messages["from"];
 
         console.log("Enviado desde :" + numero + " El texto es el siguiente : " + texto);
         enviarmensaje.EnviarMensajeWhastapp(texto,numero);
