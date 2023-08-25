@@ -4,7 +4,13 @@ const verificar = (req, res) => {
         let token = req.query["hub.verify_token"];
         let challenge = req.query["hub.challenge"];
 
-        res.send(challenge);
+        if (challenge != null && token != null && token == tokenandercode) {
+            res.send(challenge);
+        } else {
+            res.status(400).send();
+        }
+
+       
         console.log(req);
     } catch (e) {
         res.status(400).send();
