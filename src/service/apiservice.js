@@ -51,7 +51,17 @@ function EnviarMensajeWhastapp(texto,numero){
                 "link": "http://www.economia.unam.mx/deschimex/cechimex/chmxExtras/repositorio/archivos/Hola.pdf",
                 "caption": "Temario del Curso #001 "
             }
-        });                  
+        });      
+    } else if (texto =="4"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "audio",
+            "audio": {
+                "link": "https://filesamples.com/samples/audio/mp3/sample1.mp3",                
+            }
+        });                              
     } else {
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
