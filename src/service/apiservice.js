@@ -61,7 +61,16 @@ function EnviarMensajeWhastapp(texto,numero){
             "audio": {
                 "link": "https://filesamples.com/samples/audio/mp3/sample1.mp3",                
             }
-        });                              
+        });      
+    } else if (texto =="5"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",
+            "to": numero,
+            "text": {
+                "preview_url": true,
+                "body": "Introduccion al curso https://youtu.be/"
+            }
+        });                                         
     } else {
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
