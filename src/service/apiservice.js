@@ -4,7 +4,7 @@ function EnviarMensajeWhastapp(texto,numero){
 
     texto = texto.toLowerCase();
     if (texto.includes("hola")) {
-        let data = JSON.stringify({
+        var data = JSON.stringify({
             "messaging_product": "whatsapp",   
             "recipient_type": "individual",
             "to": numero,
@@ -15,7 +15,7 @@ function EnviarMensajeWhastapp(texto,numero){
             }
         });
     } else {
-        let data = JSON.stringify({
+        var data = JSON.stringify({
             "messaging_product": "whatsapp",   
             "recipient_type": "individual",
             "to": numero,
