@@ -2,6 +2,8 @@ const https = require("https");
 
 function EnviarMensajeWhastapp(texto,numero){
 
+    let data;
+
     texto = texto.toLowerCase();
     if (texto.includes("hola")) {
         let data = JSON.stringify({
