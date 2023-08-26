@@ -91,10 +91,34 @@ function EnviarMensajeWhastapp(texto,numero){
             "type": "text",
             "text": {
                 "preview_url": false,
-                "body": "Horario de Atencion : Lunes a Viernes. \n Horario : 9:00 am a 5:00 pm"
+                "body": "Horario de Atencion : Lunes a Viernes. \nHorario : 9:00 am a 5:00 pm"
                 
             }
-        });                                                           
+        });     
+    } else if (texto.includes("gracias")){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "Gracias a ti por contactarme"
+                
+            }
+        });     
+    } else if (texto.includes("adios") || texto.includes("bye") || texto.includes("nos vemos")){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "Hasta luego"
+                
+            }
+        });                                                                                  
     } else {
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
