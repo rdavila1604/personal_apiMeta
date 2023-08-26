@@ -28,6 +28,19 @@ function EnviarMensajeWhastapp(texto,numero){
                 
             }
         });
+    } else if (texto =="2"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": "51949696593",
+            "type": "location",
+            "location": {
+                "latitude": -12.086268787866294, 
+                "longitude": -77.00543685487285,
+                "name": "Centro Comercial Rambla",
+                "address": "San Borja 123 aviacion"
+            }
+        });        
     } else {
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
