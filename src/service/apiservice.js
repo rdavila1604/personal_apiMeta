@@ -14,7 +14,7 @@ function EnviarMensajeWhastapp(texto,numero){
                 "body": "🚀 Hola, Como estas, Bienvenido."
             }
         });
-    } else if (texto == 1){
+    } else if (texto =="1"){
         let data = JSON.stringify({
             "messaging_product": "whatsapp",   
             "recipient_type": "individual",
