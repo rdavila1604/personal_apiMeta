@@ -94,7 +94,18 @@ function EnviarMensajeWhastapp(texto,numero){
                 "body": "Horario de Atencion : Lunes a Viernes. \nHorario : 9:00 am a 5:00 pm"
                 
             }
-        });     
+        });
+    } else if (texto =="0"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "🚀 Hola visita mi web para mas información. \n 😃 Por favor ingresar de la lista un número para recibir información. \n 1️⃣. Informacion del Curso. \n 2️⃣. Ubicacion del local. 📍 \n 3️⃣. Enviar temario en pdf. 📄 \n 4️⃣. Por favor enviar audio explicando curso. 🎙️ \n 5️⃣. Ver video de Introducción al curso. \n 6️⃣. Hablar con un humano. 👥 \n 7️⃣. Horario de Atención. 🕖 \n 8️⃣. Consultar a Chapgpt usar 'gchapgpt: <Ingrese Consulta>'. \n 0️⃣. Regresar al Menú."
+            }
+        });       
     } else if (texto.includes("gracias")){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
@@ -127,7 +138,7 @@ function EnviarMensajeWhastapp(texto,numero){
             "type": "text",
             "text": {
                 "preview_url": false,
-                "body": "🚀 Hola visita mi web para mas información \n 😃 Por favor ingresar de la lista un número para recibir información \n 1️⃣ Informacion del Curso \n 2️⃣ Ubicacion del local 📍 \n 3️⃣ Enviar temario en pdf 📄 \n 4️⃣ Por favor enviar audio explicando curso 🎙️ \n 5️⃣ Ver video de Introducción al curso \n 6️⃣ Hablar con un humano 👥 \n 7️⃣ Horario de Atención 🕖"
+                "body": "🚀 Hola visita mi web para mas información. \n 😃 Por favor ingresar de la lista un número para recibir información. \n 1️⃣. Informacion del Curso. \n 2️⃣. Ubicacion del local. 📍 \n 3️⃣. Enviar temario en pdf. 📄 \n 4️⃣. Por favor enviar audio explicando curso. 🎙️ \n 5️⃣. Ver video de Introducción al curso. \n 6️⃣. Hablar con un humano. 👥 \n 7️⃣. Horario de Atención. 🕖 \n 8️⃣. Consultar a Chapgpt usar 'gchapgpt: <Ingrese Consulta>'. \n 0️⃣. Regresar al Menú."
             }
         });
     }
@@ -141,7 +152,7 @@ function EnviarMensajeWhastapp(texto,numero){
         body: data,
         headers : {
             "Content-Type" : "application/json",
-            Authorization : "Bearer EAAOTv6MMiQoBO2UFf6rlQ0xivouXKKen4HmEjZCeQAHGykfK2clzj3PY9vYBOLpG2mStAttoaNrwfMT4PQtAY5Ws5Uf0SuBS7ZAAdeXQLnx6ovo8fhQ0jKuH716gjrjZAFGZBblfZCFaXnw1ZBGAclcD7ZBpG6Hdln4vZBqiDVuypL5KdIUN39LyGBMd6p9QhOHe6ssHir5CcHFdIiLFJgEZD" 
+            Authorization : "Bearer EAAOTv6MMiQoBO0ionT1oGn3v5hn4v7ZCCkhsk7KGfGlavlY07j5ZBV4UhztnGLH22V0qieatwkaXaM3qU6o5axlKrzIkAAyH7UQay7SvXVEiM4wX80SDjdR7PJdH1QEs2l1GqiC0yyyy4xVPEcY4reFKyaIdsZCSENZCAQMZBLSAV8pCPbyh0oBpAbg7t5jZAq9rmtDEAi4fVC7oCHU0BH" 
         }
     }
 
