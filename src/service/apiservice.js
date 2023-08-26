@@ -70,7 +70,31 @@ function EnviarMensajeWhastapp(texto,numero){
                 "preview_url": true,
                 "body": "Introduccion al curso https://youtu.be/"
             }
-        });                                         
+        });    
+    } else if (texto =="6"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "En breve me ponde en contacto contigo"
+                
+            }
+        });  
+    } else if (texto =="7"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "Horario de Atencion : Lunes a Viernes. \n Horario : 9:00 am a 5:00 pm"
+                
+            }
+        });                                                           
     } else {
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
