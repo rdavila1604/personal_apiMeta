@@ -32,7 +32,7 @@ function EnviarMensajeWhastapp(texto,numero){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
-            "to": "51949696593",
+            "to": numero,
             "type": "location",
             "location": {
                 "latitude": -12.086268787866294, 
@@ -40,7 +40,18 @@ function EnviarMensajeWhastapp(texto,numero){
                 "name": "Centro Comercial Rambla",
                 "address": "San Borja 123 aviacion"
             }
-        });        
+        });      
+    } else if (texto =="3"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "document",
+            "document": {
+                "link": "http://www.economia.unam.mx/deschimex/cechimex/chmxExtras/repositorio/archivos/Hola.pdf",
+                "caption": "Temario del Curso #001 "
+            }
+        });                  
     } else {
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
