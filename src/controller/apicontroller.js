@@ -38,7 +38,7 @@ const recibir = (req, res) => {
             // const {from,text} = req.body.entry[0].changes[0].value.messages[0];
             // const {body} = text;
     
-            console.log("Enviado desde :" + numero + " El texto es el siguiente : " + texto);
+            //console.log("Enviado desde :" + numero + " El texto es el siguiente : " + texto);
             enviarmensaje.EnviarMensajeWhastapp(texto,numero);
         }
 
