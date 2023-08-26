@@ -95,6 +95,33 @@ function EnviarMensajeWhastapp(texto,numero){
                 
             }
         });
+    } else if (texto =="8"){
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "Para consultar a Chapgpt usar 'gchapgpt: <Ingrese Consulta>'"
+                
+            }
+        });
+    } else if (texto.includes("gchapgpt:")){
+        let parts =texto.split("gchatgpt: ");
+        console.log(parts[1]);
+
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",   
+            "recipient_type": "individual",
+            "to": numero,
+            "type": "text",
+            "text": {
+                "preview_url": false,
+                "body": "Respuesta de chatgpt"
+                
+            }
+        });                        
     } else if (texto =="0"){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",   
